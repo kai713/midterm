@@ -18,7 +18,6 @@
 }
 
 html {
-    /*check them*/
     font-size: 60%;
     overflow-x: hidden;
 }
@@ -149,7 +148,6 @@ span {
 }
 
 .social-icons a {
-    /*check them*/
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -435,9 +433,9 @@ span {
 }
 
 .hobbies_info h4{
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 800;
-    line-height: 2;
+    line-height: 1.1;
 }
 
 .hobbies_info p{
@@ -602,6 +600,27 @@ footer {
     color: white;
 }
 
+.hobbies-icons {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: transparent;
+    border: 1px solid transparent;
+    font-size: 2.5rem;
+    border-radius: 50%;
+
+    transition: 0.3s ease-in-out;
+}
+
+.hobbies-icons:hover {
+    color: var(--text-color);
+    transform: scale(1.2) translateY(-5px);
+    box-shadow: 0 0 25px var(--main-color);
+    background-color: var(--main-color);
+}
+
 @media(max-width: 1285px) {
     html{
         font-size: 55%;
@@ -611,7 +630,11 @@ footer {
         grid-template-columns: repeat(2,1fr);
         margin: 0 5rem;
     }
+    .hobbies_box p{
+        font-size: 1.5rem;
+    }
 }
+
 
 @media(max-width: 991px) {
     header{
@@ -620,8 +643,9 @@ footer {
     section{
         padding: 10rem 3% 2rem;
     }
+
     .timeline-items::before{
-        left: 7px;
+        left: calc(50% - 1px);
     };
     .timeline-items:nth-child(odd){
         padding-right: 0;
@@ -629,14 +653,15 @@ footer {
     }
     .timeline-items:nth-child(odd),
     .timeline-items:nth-child(even){
-        padding-right: 37px;
+       width: 102%;
     }
     .timeline-dot{
-        left:0;
+        left: calc(50% + 10px);
     }
     .hobbies{
         padding-bottom: 7rem;
     }
+
     .family .wrapper{
         grid-template-columns: repeat(1,1fr);
     }
@@ -704,5 +729,35 @@ footer {
     }
     .hobbies_container{
         grid-template-columns: repeat(1,1fr);
+    }
+    .timeline-dot{
+        left: calc(50% - 8px);
+    }
+}
+
+@media (max-width: 600px) {
+    .timeline-dot{
+        left: calc(50% - 8px);
+    }
+    .hobbies_box p{
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 438px) {
+    .hobbies_box p{
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 391px) {
+    .hobbies_box p{
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 344px) {
+    .hobbies_box p{
+        font-size: 1rem;
     }
 }
